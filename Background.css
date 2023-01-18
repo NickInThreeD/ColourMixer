@@ -57,6 +57,14 @@ body
     
 }
 
+.Image
+{
+    height: 400px;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
 .plus
 {
     margin-left: 20px;
