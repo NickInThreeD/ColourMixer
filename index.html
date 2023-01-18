@@ -10,10 +10,10 @@
 
 	<body>
 
-		
+		<img id="beautiful" class="Image" src="20230114_121101_001.jpg"/>
 
 		
-		<div class="Holder">
+		<div id="holder" class="Holder">
 			
 			
 
@@ -50,6 +50,7 @@
 				let Colour1 = document.getElementById('firstInput').value;
 				let Colour2 = document.getElementById('secondInput').value;
 				let colourResult = document.getElementById('ColourResult');
+				let BL = document.getElementById('beautiful');
 				
 				
 				if (Colour1 == "red" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "red")
@@ -101,7 +102,11 @@
 				{
 					colourResult.innerText = "Red - Purple";
 					document.getElementById('containerC').style.backgroundColor = "rgb(177, 11, 66)";
-
+				}
+				else if (Colour1 == "Beautiful" && Colour2 == "Lady")
+				{
+					BL.style.opacity = 1;
+					document.getElementById('holder').style.opacity = 0;
 				}
 				else
 				{
