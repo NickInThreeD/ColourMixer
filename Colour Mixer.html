@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Mixer</title>
+		<link rel="stylesheet" href="Background.css">
+	</head>
+
+	<body>
+
+		
+
+		
+		<div class="Holder">
+			
+			
+
+			<div id="containerC" class="container">
+				<div class="MainUIContainer">
+					<div class="MainUI">
+						<div>
+							<input class="input" id="firstInput" />
+						</div>
+						<div>
+							<p class="plus">+</p>
+						</div>
+						 <input class="input" id="secondInput"/>
+					</div>
+				</div>
+	
+				<div class="mixBtn">
+					<button class="btn" onclick="MixColours()">Mix</button>
+				</div>
+				<div class="resultContainer">
+					<p class="Result" id="ColourResult"></p>
+				</div>
+			</div>
+
+			
+		</div>
+		
+    
+
+		<script>
+			
+			function MixColours()
+			{
+				let Colour1 = document.getElementById('firstInput').value;
+				let Colour2 = document.getElementById('secondInput').value;
+				let colourResult = document.getElementById('ColourResult');
+				
+				
+				if (Colour1 == "red" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "red")
+				{
+					colourResult.innerText = "Orange";
+					document.getElementById('containerC').style.backgroundColor = "orange";
+				}
+				else if (Colour1 == "yellow" && Colour2 == "blue" || Colour1 == "blue" && Colour2 == "yellow")
+				{
+					colourResult.innerText = "Green";
+					document.getElementById('containerC').style.backgroundColor = "green";
+				}
+				else if (Colour1 == "blue" && Colour2 == "red" || Colour1 == "red" && Colour2 == "blue")
+				{
+					colourResult.innerText = "Purple";
+					document.getElementById('containerC').style.backgroundColor = "purple";
+				}
+				else if (Colour1 == "red" && Colour2 == "orange" || Colour1 == "orange" && Colour2 == "red")
+				{
+					colourResult.innerText = "Red - Orange";
+					document.getElementById('containerC').style.backgroundColor = "rgb(255, 60, 0)";
+
+				}
+				else if (Colour1 == "orange" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "orange")
+				{
+					colourResult.innerText = "Yellow - Orange";
+					document.getElementById('containerC').style.backgroundColor = "rgb(255, 60, 0)";
+					
+				}
+				else if (Colour1 == "yellow" && Colour2 == "green" || Colour1 == "green" && Colour2 == "yellow")
+				{
+					colourResult.innerText = "Yellow - Green";
+					document.getElementById('containerC').style.backgroundColor = "rgb(179, 255, 0)";
+
+				}
+				else if (Colour1 == "green" && Colour2 == "blue" || Colour1 == "blue" && Colour2 == "green")
+				{
+					colourResult.innerText = "Blue - Green";
+					document.getElementById('containerC').style.backgroundColor = "rgb(0, 165, 124)";
+
+				}
+				else if (Colour1 == "blue" && Colour2 == "purple" || Colour1 == "purple" && Colour2 == "blue")
+				{
+					colourResult.innerText = "Blue - Purple";
+					document.getElementById('containerC').style.backgroundColor = "rgb(144, 0, 240)";
+
+				}
+				else if (Colour1 == "purple" && Colour2 == "red" || Colour1 == "red" && Colour2 == "purple")
+				{
+					colourResult.innerText = "Red - Purple";
+					document.getElementById('containerC').style.backgroundColor = "rgb(177, 11, 66)";
+
+				}
+				else
+				{
+
+				}
+
+			}
+		
+
+			
+		</script>
+
+	</body>
+</html>
