@@ -1,6 +1,8 @@
-body
+.body
 {
     margin-top: 150px;
+    background-color: rgb(255, 255, 255);
+
 }
 
 
@@ -8,7 +10,6 @@ body
 .backgroundColour
 {
     position: absolute;
-    background-color: rgb(255, 30, 30);
     height: 1000px;
     top: 0px;
     left: 0px;
@@ -63,6 +64,7 @@ body
     opacity: 0;
     pointer-events: none;
     position: absolute;
+    margin: auto;
 }
 
 .plus
@@ -81,6 +83,7 @@ body
     border-radius: 6px;
     height: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: gray;
     
 }
 
@@ -107,6 +110,12 @@ body
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: none;
     border: none;
+    transition: 0.3s;
+}
+
+.btn:hover
+{
+    color: gray;
 }
 
 .resultContainer
