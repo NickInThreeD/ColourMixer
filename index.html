@@ -8,7 +8,7 @@
 		<link rel="stylesheet" href="Background.css">
 	</head>
 
-	<body>
+	<body class="body" id="Body">
 
 		<img id="beautiful" class="Image" src="20230114_121101_001.jpg"/>
 
@@ -51,73 +51,96 @@
 				let Colour2 = document.getElementById('secondInput').value;
 				let colourResult = document.getElementById('ColourResult');
 				let BL = document.getElementById('beautiful');
+				let Body = document.getElementById('Body');
 				
-				
-				if (Colour1 == "red" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "red")
+				if (Colour1 == "red" && Colour2 == "red" || Colour1 == "Red" && Colour2 == "Red")
+				{
+					colourResult.innerText = "Red";
+					document.getElementById('containerC').style.backgroundColor = "red";
+					Body.style.backgroundColor = "red";
+				}
+				else if (Colour1 == "yellow" && Colour2 == "yellow" || Colour1 == "Yellow" && Colour2 == "Yellow")
+				{
+					colourResult.innerText = "Yellow";
+					document.getElementById('containerC').style.backgroundColor = "yellow";
+					Body.style.backgroundColor = "yellow";
+				}
+				else if (Colour1 == "blue" && Colour2 == "blue" || Colour1 == "Blue" && Colour2 == "Blue")
+				{
+					colourResult.innerText = "Blue";
+					document.getElementById('containerC').style.backgroundColor = "blue";
+					Body.style.backgroundColor = "blue";
+				}
+				else if (Colour1 == "red" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "red" || Colour1 == "Red" && Colour2 == "Yellow" || Colour1 == "Yellow" && Colour2 == "Red")
 				{
 					colourResult.innerText = "Orange";
 					document.getElementById('containerC').style.backgroundColor = "orange";
+					Body.style.backgroundColor = "orange";
 				}
-				else if (Colour1 == "yellow" && Colour2 == "blue" || Colour1 == "blue" && Colour2 == "yellow")
+				else if (Colour1 == "yellow" && Colour2 == "blue" || Colour1 == "blue" && Colour2 == "yellow" || Colour1 == "Yellow" && Colour2 == "Blue" || Colour1 == "Blue" && Colour2 == "Yellow")
 				{
 					colourResult.innerText = "Green";
 					document.getElementById('containerC').style.backgroundColor = "green";
+					Body.style.backgroundColor = "green";
 				}
-				else if (Colour1 == "blue" && Colour2 == "red" || Colour1 == "red" && Colour2 == "blue")
+				else if (Colour1 == "blue" && Colour2 == "red" || Colour1 == "red" && Colour2 == "blue" || Colour1 == "Blue" && Colour2 == "Red" || Colour1 == "Red" && Colour2 == "Blue")
 				{
 					colourResult.innerText = "Purple";
 					document.getElementById('containerC').style.backgroundColor = "purple";
+					Body.style.backgroundColor = "purple";
 				}
-				else if (Colour1 == "red" && Colour2 == "orange" || Colour1 == "orange" && Colour2 == "red")
+				else if (Colour1 == "red" && Colour2 == "orange" || Colour1 == "orange" && Colour2 == "red" || Colour1 == "Red" && Colour2 == "Orange" || Colour1 == "Orange" && Colour2 == "Red")
 				{
 					colourResult.innerText = "Red - Orange";
 					document.getElementById('containerC').style.backgroundColor = "rgb(255, 60, 0)";
-
+					Body.style.backgroundColor = "rgb(255, 60, 0)";
 				}
-				else if (Colour1 == "orange" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "orange")
+				else if (Colour1 == "orange" && Colour2 == "yellow" || Colour1 == "yellow" && Colour2 == "orange" || Colour1 == "Orange" && Colour2 == "Yellow" || Colour1 == "Yellow" && Colour2 == "Orange")
 				{
 					colourResult.innerText = "Yellow - Orange";
-					document.getElementById('containerC').style.backgroundColor = "rgb(255, 60, 0)";
-					
+					document.getElementById('containerC').style.backgroundColor = "rgb(255, 217, 0)";
+					Body.style.backgroundColor = "rgb(255, 217, 0)";
 				}
-				else if (Colour1 == "yellow" && Colour2 == "green" || Colour1 == "green" && Colour2 == "yellow")
+				else if (Colour1 == "yellow" && Colour2 == "green" || Colour1 == "green" && Colour2 == "yellow" || Colour1 == "Yellow" && Colour2 == "Green" || Colour1 == "Green" && Colour2 == "Yellow")
 				{
 					colourResult.innerText = "Yellow - Green";
 					document.getElementById('containerC').style.backgroundColor = "rgb(179, 255, 0)";
-
+					Body.style.backgroundColor = "rgb(179, 255, 0)";
 				}
-				else if (Colour1 == "green" && Colour2 == "blue" || Colour1 == "blue" && Colour2 == "green")
+				else if (Colour1 == "green" && Colour2 == "blue" || Colour1 == "blue" && Colour2 == "green" || Colour1 == "Green" && Colour2 == "Blue" || Colour1 == "Blue" && Colour2 == "Green")
 				{
 					colourResult.innerText = "Blue - Green";
 					document.getElementById('containerC').style.backgroundColor = "rgb(0, 165, 124)";
-
+					Body.style.backgroundColor = "rgb(0, 165, 124)";
 				}
-				else if (Colour1 == "blue" && Colour2 == "purple" || Colour1 == "purple" && Colour2 == "blue")
+				else if (Colour1 == "blue" && Colour2 == "purple" || Colour1 == "purple" && Colour2 == "blue" || Colour1 == "Blue" && Colour2 == "Purple" || Colour1 == "Purple" && Colour2 == "Blue")
 				{
 					colourResult.innerText = "Blue - Purple";
 					document.getElementById('containerC').style.backgroundColor = "rgb(144, 0, 240)";
-
+					Body.style.backgroundColor = "rgb(144, 0, 240)";
 				}
-				else if (Colour1 == "purple" && Colour2 == "red" || Colour1 == "red" && Colour2 == "purple")
+				else if (Colour1 == "purple" && Colour2 == "red" || Colour1 == "red" && Colour2 == "purple" || Colour1 == "Purple" && Colour2 == "Red" || Colour1 == "Red" && Colour2 == "Purple")
 				{
 					colourResult.innerText = "Red - Purple";
 					document.getElementById('containerC').style.backgroundColor = "rgb(177, 11, 66)";
+					Body.style.backgroundColor = "rgb(177, 11, 66)";
 				}
-				else if (Colour1 == "red" && Colour2 == "white" || Colour1 == "white" && Colour2 == "red")
+				else if (Colour1 == "red" && Colour2 == "white" || Colour1 == "white" && Colour2 == "red" || Colour1 == "Red" && Colour2 == "White" || Colour1 == "White" && Colour2 == "Red")
 				{
 					colourResult.innerText = "Pink";
 					document.getElementById('containerC').style.backgroundColor = "rgb(255, 152, 215)";
+					Body.style.backgroundColor = "rgb(255, 152, 215)";
 				}
 				else if (Colour1 == "Beautiful" && Colour2 == "Lady")
 				{
 					BL.style.opacity = 1;
 					document.getElementById('holder').style.opacity = 0;
+					Body.style.backgroundColor = "rgb(255, 255, 255)";
 				}
 				else
 				{
 
 				}
-
 			}
 		
 
